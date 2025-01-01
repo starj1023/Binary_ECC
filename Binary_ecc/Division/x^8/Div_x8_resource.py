@@ -6,6 +6,8 @@ from projectq.ops import H, CNOT, Measure, Toffoli, X, All, T, Tdag, S, Swap
 from projectq.backends import CircuitDrawer, ResourceCounter, ClassicalSimulator
 from projectq.meta import Loop, Compute, Uncompute, Control
 
+# The estimated qubit count is an upper bound because additional dummy operations are performed for the reverse operation. 
+# To verify the qubit count, run Div_n.py (not Div_n_resource.py).
 
 def Inversion(eng):
 

@@ -7,7 +7,7 @@ from projectq.backends import CircuitDrawer, ResourceCounter, ClassicalSimulator
 from projectq.meta import Loop, Compute, Uncompute, Control
 
 
-def Point_addition(eng):
+def Multiplication(eng):
 
     n = 16
 
@@ -237,7 +237,7 @@ NCT = 1
 resource_check = 0
 classic = ClassicalSimulator()
 eng = MainEngine(classic)
-Point_addition(eng)
+Multiplication(eng)
 eng.flush()
 
 resource_check = 1
@@ -245,6 +245,6 @@ NCT = 1
 AND_check = 0 # If AND = 1, the number of qubits must be manually counted.
 Resource = ResourceCounter()
 eng = MainEngine(Resource)
-Point_addition(eng)
+Multiplication(eng)
 print('\n')
 print(Resource)

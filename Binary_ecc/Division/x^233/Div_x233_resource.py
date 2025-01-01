@@ -7,6 +7,9 @@ from projectq.backends import CircuitDrawer, ResourceCounter, ClassicalSimulator
 from projectq.meta import Loop, Compute, Uncompute, Control
 from Matrix import Matrix, Matrix_2_4, Matrix_2_2, Matrix_2_8, Matrix_2_16, Matrix_2_40, Matrix_2_32, Matrix_2_64, Matrix_2_104
 
+# The estimated qubit count is an upper bound because additional dummy operations are performed for the reverse operation. 
+# To verify the qubit count, run Div_n.py (not Div_n_resource.py).
+
 def Inversion(eng):
 
     n = 233

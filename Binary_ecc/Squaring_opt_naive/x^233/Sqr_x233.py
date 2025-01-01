@@ -7,7 +7,7 @@ from projectq.backends import CircuitDrawer, ResourceCounter, ClassicalSimulator
 from projectq.meta import Loop, Compute, Uncompute, Control
 from Matrix import Matrix, Matrix_2_4, Matrix_2_2, Matrix_2_8, Matrix_2_16, Matrix_2_40, Matrix_2_32, Matrix_2_64, Matrix_2_104
 
-def Point_addition(eng):
+def Squraing_opt_naive(eng):
     n = 233
 
     x1 = eng.allocate_qureg(n)
@@ -65,7 +65,7 @@ NCT = 1
 resource_check = 0
 classic = ClassicalSimulator()
 eng = MainEngine(classic)
-Point_addition(eng)
+Squraing_opt_naive(eng)
 eng.flush()
 
 resource_check = 1
@@ -73,6 +73,6 @@ NCT = 1
 AND_check = 0 # If AND = 1, the number of qubits must be manually counted.
 Resource = ResourceCounter()
 eng = MainEngine(Resource)
-Point_addition(eng)
+Squraing_opt_naive(eng)
 print('\n')
 print(Resource)

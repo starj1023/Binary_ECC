@@ -10,7 +10,7 @@ from Matrix_1 import Matrix_2_8, Matrix_2_16, Matrix_2_10
 from Matrix_2 import Matrix_2_32, Matrix_2_64, Matrix_2_26
 from Matrix_3 import Matrix_2_128, Matrix_2_256, Matrix_2_58
 
-def Point_addition(eng):
+def Squraing_opt_naive(eng):
 
     n = 571
 
@@ -69,7 +69,7 @@ NCT = 1
 resource_check = 0
 classic = ClassicalSimulator()
 eng = MainEngine(classic)
-Point_addition(eng)
+Squraing_opt_naive(eng)
 eng.flush()
 
 resource_check = 1
@@ -77,6 +77,6 @@ NCT = 1
 AND_check = 0 # If AND = 1, the number of qubits must be manually counted.
 Resource = ResourceCounter()
 eng = MainEngine(Resource)
-Point_addition(eng)
+Squraing_opt_naive(eng)
 print('\n')
 print(Resource)

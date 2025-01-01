@@ -10,6 +10,9 @@ from Matrix_1 import Matrix_2_8, Matrix_2_16, Matrix_2_10
 from Matrix_2 import Matrix_2_32, Matrix_2_64, Matrix_2_26
 from Matrix_3 import Matrix_2_128, Matrix_2_256, Matrix_2_58
 
+# The estimated qubit count is an upper bound because additional dummy operations are performed for the reverse operation. 
+# To verify the qubit count, run Div_n.py (not Div_n_resource.py).
+
 def Inversion(eng):
 
     n = 571
